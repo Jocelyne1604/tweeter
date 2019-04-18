@@ -10,12 +10,14 @@ $(document).ready(function() {
     const $form = $(this);
     // how do we handle this?
     if ($("form textarea").val().length > 140) {
-      return alert("Too many characters: Limit 140");
+      $(".error1").css("visibility", "visible");
+      $(".error2").css("visibility", "hidden");
     } else if (
       $("form textarea").val() === "" ||
       $("form textarea").val() === null
     ) {
-      return alert("Empty field");
+      $(".error2").css("visibility", "visible");
+      $(".error1").css("visibility", "hidden");
     } else {
       $.ajax({
         type: "POST",

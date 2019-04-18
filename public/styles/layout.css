@@ -31,7 +31,7 @@ body {
 main {
   width: 50%;
   margin-left: 25%;
-  padding-top: 1em;
+  padding-top: 10em;
   background-color: white;
 }
 
@@ -63,18 +63,30 @@ article {
   margin-top: 1em;
 }
 #btn {
+  margin-top: 5px;
   align-items: left;
 }
+
 .new-tweet-textbox {
   size: 100%;
 }
 
 .counter {
-  align-items: right;
+  position: relative;
+  float: right;
 }
 
 .turnRed {
   color: red;
+}
+
+.error1 {
+  visibility: hidden;
+  margin-top: 5px;
+}
+.error2 {
+  visibility: hidden;
+  margin-top: 5px;
 }
 
 .tweet-header {
@@ -106,6 +118,13 @@ article {
   position: relative;
   float: right;
   padding: 0 3px;
+}
+
+.btn-compose {
+  margin: 10px;
+  height: 70%;
+  width: 15%;
+  float: right;
 }
 
 /*
