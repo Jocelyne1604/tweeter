@@ -91,6 +91,21 @@ $(document).ready(function() {
     }
   }
 
+  $(".new-tweet form input[type='submit']").click(function(event) {
+    event.preventDefault();
+    const $form = $(this);
+    // how do we handle this?
+    $.ajax({
+      type: "POST",
+      url: $(".new-tweet form").attr("action"),
+      data: $(".new-tweet form").serialize(),
+      success: function(data) {
+        alert(data);
+      }
+    });
+    return false;
+  });
+
   function createTweetElement(tweet) {
     const imgElement = tweet.user.avatars.small;
     const nameElement = tweet.user.name;
