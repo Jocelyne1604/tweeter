@@ -21,9 +21,8 @@ $(document).ready(function() {
         type: "POST",
         url: $(".new-tweet form").attr("action"),
         data: $(".new-tweet form").serialize(),
-
         success: function(data) {
-          alert(data);
+          loadTweets();
         }
       });
     }
@@ -48,7 +47,7 @@ $(document).ready(function() {
     //   takes return value and appends it to the tweets container
     for (let tweet of tweets) {
       if (tweet.user) {
-        $("#new-tweet-container").append(createTweetElement(tweet)); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+        $("#new-tweet-container").prepend(createTweetElement(tweet)); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
       }
     }
   }
