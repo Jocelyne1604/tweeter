@@ -22,6 +22,23 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+  
+<!-- Loading function for button-->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+      $(function() {
+        var $button = $("#load-more-posts");
+        $button.on("click", function() {
+          console.log("Button clicked, performing ajax call...");
+          $.ajax("more-posts.html", { method: "GET" }).then(function(
+            morePostsHtml
+          ) {
+            console.log("Success: ", morePostsHtml);
+            $button.replaceWith(morePostsHtml);
+          });
+        });
+      });
+      </script>
   </head>
 
   <!--Boostrap glyphicon-->
