@@ -9,14 +9,24 @@ $(document).ready(function() {
     event.preventDefault();
     const $form = $(this);
     // how do we handle this?
-    $.ajax({
-      type: "POST",
-      url: $(".new-tweet form").attr("action"),
-      data: $(".new-tweet form").serialize(),
-      success: function(data) {
-        alert(data);
-      }
-    });
+    if ($("form textarea").val().length > 140) {
+      return alert("Too many characters: Limit 140");
+    } else if (
+      $("form textarea").val() === "" ||
+      $("form textarea").val() === null
+    ) {
+      return alert("Empty field");
+    } else {
+      $.ajax({
+        type: "POST",
+        url: $(".new-tweet form").attr("action"),
+        data: $(".new-tweet form").serialize(),
+
+        success: function(data) {
+          alert(data);
+        }
+      });
+    }
     return false;
   });
 
