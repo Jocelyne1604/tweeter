@@ -78,9 +78,11 @@ article {
 
 .error1 {
   visibility: hidden;
+  display: inline;
 }
 .error2 {
   visibility: hidden;
+  display: inline;
 }
 
 .tweet-header {
@@ -101,6 +103,11 @@ article {
 .avatar-name {
   align-items: left;
 }
+
+.handle {
+  text-align: right;
+}
+
 .tweet-footer {
   border-top: #f3f3f3 solid 1px;
   padding: 0.5em 0 0.5em 0;
