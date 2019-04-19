@@ -37,14 +37,14 @@ $(document).ready(function() {
     const $form = $(this);
     // how do we handle this?
     if ($("form textarea").val().length > 140) {
-      $(".error1").css("visibility", "visible");
-      $(".error2").css("visibility", "hidden");
+      $("#error1").css("visibility", "visible");
+      $("#error2").css("visibility", "hidden");
     } else if (
       $("form textarea").val() === "" ||
       $("form textarea").val() === null
     ) {
-      $(".error2").css("visibility", "visible");
-      $(".error1").css("visibility", "hidden");
+      $("#error2").css("visibility", "visible");
+      $("#error1").css("visibility", "hidden");
     } else {
       $.ajax({
         type: "POST",
@@ -52,6 +52,8 @@ $(document).ready(function() {
         data: $(".new-tweet form").serialize(),
         success: function(data) {
           $(".new-tweet-textbox").val("");
+          $(".counter").text("140");
+
           loadTweets();
         }
       });
@@ -89,6 +91,16 @@ $(document).ready(function() {
     const contentElement = tweet.content.text;
     const timeStampElement = timeDiff(Date.now(), tweet.created_at);
 
+    let $heart = $("<span>").addClass(
+      "glyphicon-hover glyphicon glyphicon-heart"
+    );
+    let $retweet = $("<span>").addClass(
+      "glyphicon-hover glyphicon glyphicon-retweet"
+    );
+    let $flag = $("<span>").addClass(
+      "glyphicon-hover glyphicon glyphicon-flag"
+    );
+
     let $img = $("<img>")
       .addClass("avatar")
       .attr("src", imgElement);
@@ -101,7 +113,8 @@ $(document).ready(function() {
     let $content = $("<p>").text(contentElement);
     let $footer = $("<footer>")
       .addClass("tweet-footer")
-      .text(timeStampElement);
+      .text(timeStampElement)
+      .append($heart, $retweet, $flag);
     const $tweet = $("<article>")
       .addClass("tweet-container")
       .append($img, $name, $handle, $content, $footer);
