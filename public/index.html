@@ -21,13 +21,8 @@
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
-    <script
-    type="text/javascript"
-    src="/scripts/toogle.js"
-  ></script>
+    <script type="text/javascript" src="/scripts/toogle.js"></script>
     <script type="text/javascript" src="/scripts/app.js"></script>
-  
-
   </head>
 
   <!--Boostrap glyphicon-->
@@ -35,7 +30,12 @@
     rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
   />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -45,8 +45,9 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png" />
       <span class="header">Tweeter</span>
-      <button type="button" class="btn btn-compose btn-outline-dark">Compose</button>
-      
+      <button type="button" class="btn btn-compose btn-outline-dark">
+        Compose
+      </button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -54,49 +55,54 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method=" POST" action="/tweets/">
-          <textarea id="exampleFormControlTextarea1" rows="3"
+          <textarea
+            id="exampleFormControlTextarea1"
+            rows="3"
             class="new-tweet-textbox form-control"
             name="text"
             placeholder="What are you humming about?"
           ></textarea>
           <div>
-          <input id="btn" type="submit" value="Tweet" type="button" class="btn btn-outline-dark"/>
-          <span class="counter">140</span>
+            <input
+              id="btn"
+              type="submit"
+              value="Tweet"
+              type="button"
+              class="btn btn-outline-dark"
+            />
+            <span class="counter">140</span>
           </div>
           <div class="error1 alert alert-danger" role="alert">
-Too Many caracters            </div>
-<div class="error2 alert alert-danger" role="alert">
-    Empty field           </div>
+            Too Many caracters
+          </div>
+          <div class="error2 alert alert-danger" role="alert">
+            Empty field
+          </div>
         </form>
       </section>
-<section id="new-tweet-container">
-      <article class="tweet-container">
-        <header class="tweet-header">
-          <img
-            src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/10_avatar-512.png"
-            class="avatar"
-          />
-          <h3 class="avatar-name">Test Test</h3>
-          <h4 classe="handle">@Test</h4>
-        </header>
-        <p>
-        </p>
-        <footer class="tweet-footer">
-          10 hours ago 
-          <span class="glyphicon-hover glyphicon glyphicon-heart"></span>
-          <span class="glyphicon-hover glyphicon glyphicon-retweet"></span>
-          <span class="glyphicon-hover glyphicon glyphicon-flag">
-        </footer>
-      </article>
-
-
+      <section id="new-tweet-container">
+        <article class="tweet-container">
+          <header class="tweet-header">
+            <img
+              src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/10_avatar-512.png"
+              class="avatar"
+            />
+            <h3 class="avatar-name">Test Test</h3>
+            <h4 classe="handle">@Test</h4>
+          </header>
+          <p></p>
+          <footer class="tweet-footer">
+            10 hours ago
+            <span class="glyphicon-hover glyphicon glyphicon-heart"></span>
+            <span class="glyphicon-hover glyphicon glyphicon-retweet"></span>
+            <span class="glyphicon-hover glyphicon glyphicon-flag"></span>
+          </footer>
+        </article>
       </section>
- 
     </main>
   </body>
   <script
     type="text/javascript"
     src="/scripts/composer-char-counter.js"
   ></script>
-
 </html>
