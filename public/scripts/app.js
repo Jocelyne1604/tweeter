@@ -51,6 +51,7 @@ $(document).ready(function() {
         url: $(".new-tweet form").attr("action"),
         data: $(".new-tweet form").serialize(),
         success: function(data) {
+          $(".new-tweet-textbox").val("");
           loadTweets();
         }
       });
