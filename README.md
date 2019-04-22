@@ -18,5 +18,5 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of the comment box"] (https://github.com/Jocelyne1604/tweeter/blob/master/docs/main%20page.png?raw=true)
-!["Screenshot of the main page"] (https://github.com/Jocelyne1604/tweeter/blob/master/docs/comment%20textbox.png?raw=true)
+!["Screenshot of the comment box"](https://github.com/Jocelyne1604/tweeter/blob/master/docs/main%20page.png?raw=true)
+!["Screenshot of the main page"](https://github.com/Jocelyne1604/tweeter/blob/master/docs/comment%20textbox.png?raw=true)
